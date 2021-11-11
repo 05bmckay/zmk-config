@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
+#include <dt-bindings/zmk/ext_power.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -28,12 +28,12 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |BLCLR |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | TAB  | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     | UP  |  {  |  }  |      | 
+// | TAB  | BT1 | BT2 | BT3 | BT4 | BT5 |   |EP_OFF|EP_ON| UP  |  {  |  }  |      | 
 // | SHFT |     |     |     |     |     |   |     | LFT | DOWN| RGT |     |      |
 //                    | GUI |     | SPC |   | SPC | ENT | RGUI|
                         bindings = <
    &bt BT_CLR &kp N1       &kp N2       &kp N3       &kp N4       &kp N5            &kp N6      &kp N7     &kp N8     &kp N9    &kp N0    &kp BSPC
-   &kp TAB    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans      &trans     &kp UP     &kp LBKT  &kp RBKT  &trans 
+   &kp TAB    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp EP_OFF      &kp EP_ON    &kp UP     &kp LBKT  &kp RBKT  &trans 
    &kp LSHFT  &kp GRAVE       &trans       &trans       &trans       &trans            &trans      &kp LEFT   &kp DOWN   &kp RIGHT &trans    &trans 
                           	        &kp LGUI     &trans       &kp SPACE         &kp SPACE   &kp RET    &kp RGUI
                         >;
